@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+/* Agora importa o Tailwind */
+@import "tailwindcss";
+
+body {
+  font-family: 'Special Gothic Expanded One', sans-serif;
+}
