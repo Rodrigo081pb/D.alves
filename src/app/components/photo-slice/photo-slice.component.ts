@@ -16,7 +16,6 @@ export class PhotoSliceComponent {
     'https://i.pinimg.com/474x/31/35/a1/3135a11726cf53688f88f0f227bc1c84.jpg',
     'https://i.pinimg.com/474x/2f/17/2c/2f172c69aad40ea253acddb16d90eaee.jpg',
     'https://i.pinimg.com/474x/bb/fb/50/bbfb500d7e7726ded16dfac5246e0055.jpg',
-    'https://i.pinimg.com/474x/bb/fb/50/bbfb500d7e7726ded16dfac5246e0055.jpg'
   ];
 
   currentIndex = 0;
