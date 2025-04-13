@@ -27,12 +27,31 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M11 18V6l-8.5 6L11 18zm1.5-6l8.5 6V6l-8.5 6z"/>
     </svg>
-    <!-- Play -->
-    <div class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center">
+
+    <!-- BOTÃO TOGGLE (Play/Pause) -->
+    <div
+    class="w-12 h-12 rounded-full border-2 border-black flex items-center justify-center cursor-pointer"
+    (click)="togglePlayPause()"
+    >
+    <ng-container *ngIf="!isPlaying; else pauseIcon">
+      <!-- Ícone Play -->
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
         <path d="M8 5v14l11-7z"/>
       </svg>
+    </ng-container>
+    <ng-template #pauseIcon>
+      <!-- Ícone Pause -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M6 5h4v14H6zm8 0h4v14h-4z"/>
+      </svg>
+    </ng-template>
     </div>
+
+    <!-- Player escondido do YouTube -->
+    <div style="display: none;">
+      <div id="player"></div>
+    </div>
+
     <!-- Next -->
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
       <path d="M13 6v12l8.5-6L13 6zM11.5 12L3 6v12l8.5-6z"/>
